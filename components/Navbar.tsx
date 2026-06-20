@@ -27,7 +27,7 @@ export default function Navbar() {
 
       {/* Right Side */}
       <div className="flex items-center gap-5">
-        {isSignedIn && <UserButton afterSignOutUrl="/sign-in" />}
+        {isSignedIn && <UserButton />}
 
        
         <MobileNav />

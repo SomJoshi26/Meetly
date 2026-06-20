@@ -36,11 +36,15 @@ const StreamVideoProvider = ({ children }: { children: ReactNode }) => {
   }, [user, isLoaded]);
 
   // ✅ ALWAYS render StreamVideo (never conditionally remove it)
-  return (
-    <StreamVideo client={videoClient ?? undefined}>
-      {children}
-    </StreamVideo>
-  );
+ if (!videoClient) {
+  return <>{children}</>;
+}
+
+return (
+  <StreamVideo client={videoClient}>
+    {children}
+  </StreamVideo>
+);
 };
 
 export default StreamVideoProvider;
