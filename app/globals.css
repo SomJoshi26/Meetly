@@ -20,6 +20,16 @@
   --color-dark-1: #1C1F2E;
   --color-dark-2: #161925;
   --color-blue-1: #0E78F9;
+  --color-sky-1: #C9DDFF;
+  --color-sky-2: #ECF0FF;
+  --color-sky-3: #F5FCFF;
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+   --color-orange-1: #FF742E;
+   --color-purple-1: #830EF9;
+   --color-yellow-1: #F9A90E;
+ 
+  --background-image-hero: url("/images/hero-background.png");
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-sans);
@@ -59,6 +69,16 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
 }
 
 :root {
