@@ -19,7 +19,7 @@ const MeetingPage = () => {
  const params = useParams<{ id: string }>();
 const id = params?.id ?? '';
 
-const { call, isCallLoading } = useGetCallById(id);
+
   const { isLoaded, user } = useUser();
   const { call, isCallLoading } = useGetCallById(id);
   const [isSetupComplete, setIsSetupComplete] = useState(false);
